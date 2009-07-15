@@ -25,8 +25,8 @@
  * Table tl_user_group
  */
  
-$GLOBALS['TL_DCA']['tl_user']['palettes']['extend'] = str_replace('fop', 'fop;taxonomymounts',$GLOBALS['TL_DCA']['tl_user']['palettes']['extend']);
-$GLOBALS['TL_DCA']['tl_user']['palettes']['custom'] = str_replace('fop', 'fop;taxonomymounts',$GLOBALS['TL_DCA']['tl_user']['palettes']['custom']);
+$GLOBALS['TL_DCA']['tl_user']['palettes']['extend'] = str_replace('fop;', 'fop;{taxonomy_legend},taxonomymounts;', $GLOBALS['TL_DCA']['tl_user']['palettes']['extend']);
+$GLOBALS['TL_DCA']['tl_user']['palettes']['custom'] = str_replace('fop;', 'fop;{taxonomy_legend},taxonomymounts;', $GLOBALS['TL_DCA']['tl_user']['palettes']['custom']);
 
 $GLOBALS['TL_DCA']['tl_user']['fields']['taxonomymounts'] = array
 		(

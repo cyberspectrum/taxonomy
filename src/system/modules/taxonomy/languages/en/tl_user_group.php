@@ -27,4 +27,10 @@
 $GLOBALS['TL_LANG']['tl_user_group']['taxonomymounts'] = array('Taxonomymounts', 'Please select the taxonomy roots you want to enable for the current group. Sub roots will be included automatically.');
 $GLOBALS['TL_LANG']['tl_user_group']['taxonomytitle'] = 'Taxonomy Tree';
 
+/**
+ * Legends
+ */
+$GLOBALS['TL_LANG']['tl_user_group']['taxonomy_legend'] = 'Taxonomy mounts';
+
+
 ?>
