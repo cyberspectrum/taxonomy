@@ -364,7 +364,7 @@ class TaxonomyTree extends Widget
 		}
 
 		$sub = 0;
-		$image = 'iconPlain.gif';
+		$image = 'iconPLAIN.gif';
 
 		// Add page name
 		$return .= $this->generateImage($image, '', $folderAttribute).' <label for="'.$this->strName.'_'.$id.'">'.($family[$id]['parent'] ? '<strong>' : '').$obj->name.($family[$id]['parent'] ? '</strong>' : '').'</label></div> <div class="tl_right">';

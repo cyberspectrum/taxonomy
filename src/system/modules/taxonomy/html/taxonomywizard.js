@@ -2,7 +2,7 @@
  * Class BackendTaxonomyWizard
  *
  * Provide methods to handle back end tasks.
- * @copyright  2008 Thyon Design
+ * @copyright  Thyon Design 2009
  * @author     John Brand <john.brand@thyon.com>
  * @package    BackendTaxonomyWizard
  */
@@ -31,29 +31,30 @@ var AjaxRequestTaxonomy =
 			{
 				item.setStyle('display', 'inline');
 				image.src = image.src.replace('folPlus.gif', 'folMinus.gif');
-				new Ajax(window.location.href, {data: 'isAjax=1&action=toggleTaxonomytree&id=' + id + '&state=1'}).request();
+				new Request({url: window.location.href, data: 'isAjax=1&action=toggleTaxonomytree&id=' + id + '&state=1'}).send();
 			}
 			else
 			{
 				item.setStyle('display', 'none');
 				image.src = image.src.replace('folMinus.gif', 'folPlus.gif');
-				new Ajax(window.location.href, {data: 'isAjax=1&action=toggleTaxonomytree&id=' + id + '&state=0'}).request();
+				new Request({url: window.location.href, data: 'isAjax=1&action=toggleTaxonomytree&id=' + id + '&state=0'}).send();
 			}
 
 			return false;
 		}
 
-		new Ajax(window.location.href, 
+		new Request(
 		{
+	    url: window.location.href,
 			data: 'isAjax=1&action=loadTaxonomytree&id=' + id + '&level=' + level + '&field=' + field + '&name=' + name + '&state=1',
-			onStateChange: AjaxRequest.displayBox('Loading data É'),
+			onRequest: AjaxRequest.displayBox('Loading data ...'),
 
 			onComplete: function(txt, xml)
 			{
 				var ul = new Element('ul');
 
 				ul.addClass('level_' + level);
-				ul.setHTML(txt);
+				ul.set('html', txt);
 
 				item = new Element('li');
 
@@ -67,7 +68,7 @@ var AjaxRequestTaxonomy =
 				image.src = image.src.replace('folPlus.gif', 'folMinus.gif');
 				AjaxRequest.hideBox();
    			}
-		}).request();
+		}).send();
 
 		return false;
 	}
