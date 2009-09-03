@@ -194,6 +194,10 @@ class tl_taxonomy extends Backend
 	   
 	public function generateAlias($varValue, DataContainer $dc)
 	{
+		// Sorry, but what is this expected to do? currently it throws a warning if no pagemount is defined.
+		// But if there is a pagemount, the resulting array of this loop is not used in this routine anyway.
+		// So I commented it out. (c.schiffler 2009-09-03)
+/*
 				$pagemounts = array();
 
 				// Get all allowed pages for the current user
@@ -204,7 +208,7 @@ class tl_taxonomy extends Backend
 				}
 
 				$pagemounts = array_unique($pagemounts);
-
+*/
 		$objField = $this->Database->prepare("SELECT pid FROM ".$dc->table." WHERE id=?")
 				->limit(1)
 				->execute($dc->id);
