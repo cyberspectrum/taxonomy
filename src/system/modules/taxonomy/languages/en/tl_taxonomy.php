@@ -26,8 +26,8 @@
  */
 
 $GLOBALS['TL_LANG']['tl_taxonomy']['title'] = 'Taxonomy terms';
-$GLOBALS['TL_LANG']['tl_taxonomy']['name'] = array('Name', 'Term name.');
-$GLOBALS['TL_LANG']['tl_taxonomy']['alias'] = array('Alias', 'Alias to be used for referencing the term.');
+$GLOBALS['TL_LANG']['tl_taxonomy']['name'] = array('Name', 'Enter the name of the taxonomy term.');
+$GLOBALS['TL_LANG']['tl_taxonomy']['alias'] = array('Alias', 'Alias to be used for referencing the term, typically in URL filters.');
 
 /**
  * Buttons
@@ -39,5 +39,12 @@ $GLOBALS['TL_LANG']['tl_taxonomy']['copy']					= array('Duplicate term', 'Duplic
 $GLOBALS['TL_LANG']['tl_taxonomy']['cut']						= array('Move term', 'Move term ID %s');
 $GLOBALS['TL_LANG']['tl_taxonomy']['delete']				= array('Delete term', 'Delete term ID %s');
 $GLOBALS['TL_LANG']['tl_taxonomy']['copyChildren']	= array('Duplicate term with sub-terms', 'Duplicate term ID %s with sub-terms');
+
+/**
+ * Legends
+ */
+
+$GLOBALS['TL_LANG']['tl_taxonomy']['title_legend'] = 'Title and alias';
+
 
 ?>

@@ -116,7 +116,7 @@ $GLOBALS['TL_DCA']['tl_taxonomy'] = array
 	// Palettes
 	'palettes' => array
 	(
-		'default'                     => 'name,alias'
+		'default'                     => '{title_legend},name,alias'
 	),
 
 	// Fields
@@ -127,7 +127,7 @@ $GLOBALS['TL_DCA']['tl_taxonomy'] = array
 			'label'                   => &$GLOBALS['TL_LANG']['tl_taxonomy']['name'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'maxlength'=>255)
+			'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50')
 		),
         
 		'alias' => array
