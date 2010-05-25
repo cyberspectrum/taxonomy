@@ -26,8 +26,6 @@
  * Table tl_taxonomy 
  */
 
-$this->import('tl_taxonomy');
- 
 $GLOBALS['TL_DCA']['tl_taxonomy'] = array
 (
 
