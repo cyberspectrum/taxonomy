@@ -133,7 +133,7 @@ $GLOBALS['TL_DCA']['tl_taxonomy'] = array
 			'label'                   => &$GLOBALS['TL_LANG']['tl_taxonomy']['alias'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
-			'eval'                    => array('maxlength'=>32),
+			'eval'                    => array('maxlength'=>255),
 			'save_callback'           => array
 			(
 				array('tl_taxonomy', 'generateAlias')

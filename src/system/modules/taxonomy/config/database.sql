@@ -20,8 +20,8 @@ CREATE TABLE `tl_taxonomy` (
   `tstamp` int(10) unsigned NOT NULL default '0',
   `sorting` int(10) unsigned NOT NULL default '0', 
   `type` varchar(255) NOT NULL default '', 
-  `alias` varchar(32) NOT NULL default '',
-  `name` varchar(64) NOT NULL default '',
+  `alias` varchar(255) NOT NULL default '',
+  `name` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`id`),
   KEY `alias` (`alias`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
