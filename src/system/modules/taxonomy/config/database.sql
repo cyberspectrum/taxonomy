@@ -24,6 +24,7 @@ CREATE TABLE `tl_taxonomy` (
   `name` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`id`),
   KEY `alias` (`alias`)
+  KEY `pid` (`pid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
